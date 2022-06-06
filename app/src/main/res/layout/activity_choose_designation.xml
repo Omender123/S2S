@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_background_image"
+        android:orientation="vertical"
+        tools:context=".ui.Authentication.Choose_Designation">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Choose Your Designation"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_teacher"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/chosse_corner"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Teacher"
+            android:textColor="@color/txt_color"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/txt_other"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/chosse_corner"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Other School Staff"
+            android:textColor="@color/txt_color"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</layout>
