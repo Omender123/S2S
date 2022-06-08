@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@id/dashboardFragment"
+        android:icon="@drawable/ic_deshboard"
+        android:title="Dashboard"
+        android:menuCategory="secondary"/>
+    <item
+        android:id="@+id/classes"
+        android:icon="@drawable/ic_class"
+        android:title="Classes"
+        android:menuCategory="secondary"/>
+
+    <item
+        android:id="@+id/attendance"
+        android:icon="@drawable/ic_attendence"
+        android:title="Attendance"
+        android:menuCategory="secondary"/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_icon_feather_user"
+        android:title="Profile"
+        android:menuCategory="secondary"/>
+
+
+
+</menu>

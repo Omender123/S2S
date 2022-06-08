@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.edutech">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.edutech" >
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,7 +18,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.S2S">
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.S2S" >
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".ui.Authentication.ChangePassword"
             android:exported="true" />
@@ -32,16 +37,13 @@
             android:exported="true" />
         <activity
             android:name=".ui.Authentication.Choose_Designation"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

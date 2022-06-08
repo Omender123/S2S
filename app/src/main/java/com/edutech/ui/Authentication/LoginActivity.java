@@ -9,11 +9,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
+import com.edutech.MainActivity;
 import com.edutech.Model.Request.LoginBody;
 import com.edutech.Model.Response.TeacherResponse;
 import com.edutech.Presenter.TeacherLoginPresenter;
 import com.edutech.R;
+import com.edutech.SharedPerfence.MyPreferences;
+import com.edutech.SharedPerfence.PrefConf;
 import com.edutech.databinding.ActivityLoginBinding;
 import com.edutech.utils.AppUtils;
 import com.edutech.utils.Validation;
@@ -114,14 +118,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onTeacherLoginSuccess(TeacherResponse response, String message) {
         if (message.equalsIgnoreCase("ok")){
-            Sneaker.with(this)
-                    .setTitle(response.getMessage())
-                    .setMessage("")
-                    .setCornerRadius(4)
-                    .setDuration(1500)
-                    .sneakSuccess();
-
-            Log.d("Tokennnnn",response.getToken());
+            MyPreferences.getInstance(context).putBoolean(PrefConf.KEY_IS_LOGGED_IN,true);
+            MyPreferences.getInstance(context).putString(PrefConf.KEY_USER_ID,response.getRes().getId());
+            MyPreferences.getInstance(context).putString(PrefConf.KEY_LOGIN_TOKEN,response.getToken());
+            MyPreferences.getInstance(context).putString(PrefConf.EMAIL,response.getRes().getEmail());
+            Toast.makeText(this, ""+response.getMessage(), Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
         }
     }
 

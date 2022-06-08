@@ -15,5 +15,11 @@
 
     <color name="colorPrimaryDark">#0F161F</color>
     <color name="gray_opacity">#B5474242</color>
+    <color name="un_select">#c2c2c2</color>
+    <color name="drawer_background">#FFFFFF</color>
+    <color name="drawer_icon">#303030</color>
+    <color name="drawer_tittle">#484848</color>
+
+
 
 </resources>

@@ -5,21 +5,36 @@
       <map>
         <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable-v24/btn_border.xml" value="0.19722222222222222" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable-v24/btn_gradint_color.xml" value="0.2203125" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/back_activity.xml" value="0.2" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/backgorund_bottonbar.xml" value="0.1265625" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/banner_gradient1.xml" value="0.1328125" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/banner_gradient2.xml" value="0.1328125" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/btn_border.xml" value="0.2203125" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/chosse_corner.xml" value="0.1125" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/circle_border.xml" value="0.2203125" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/circle_shape.xml" value="0.2203125" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/dashline.xml" value="0.1328125" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/gradient_progress.xml" value="0.2203125" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/ic_background_image.xml" value="0.19722222222222222" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/ic_email_signip.xml" value="0.19722222222222222" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/ic_group_20273.xml" value="0.2203125" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/ic_line_144.xml" value="0.2203125" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/drawable/ic_two_corner_back.xml" value="0.19722222222222222" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/activity_change_password.xml" value="0.20416666666666666" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/activity_choose_designation.xml" value="0.18" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/activity_enter_otp.xml" value="0.20416666666666666" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/activity_main.xml" value="0.15" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/activity_reset_password.xml" value="0.20416666666666666" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/custom_activity_layout.xml" value="0.33" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/custom_banner_layout.xml" value="0.22" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/fragment_deshboard.xml" value="0.25" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/fragment_notification.xml" value="0.11614583333333334" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/inculde_layout.xml" value="0.22" />
         <entry key="..\:/androidProjects/S2S/app/src/main/res/layout/progress_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/menu/drawer_manu.xml" value="0.11041666666666666" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/menu/main.xml" value="0.11041666666666666" />
+        <entry key="..\:/androidProjects/S2S/app/src/main/res/xml/service_configuration.xml" value="0.11666666666666667" />
       </map>
     </option>
   </component>

@@ -7,7 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.edutech.MainActivity;
 import com.edutech.R;
+import com.edutech.SharedPerfence.MyPreferences;
+import com.edutech.SharedPerfence.PrefConf;
 import com.edutech.databinding.ActivityChooseDesignationBinding;
 import com.irozon.sneaker.Sneaker;
 
@@ -22,6 +25,10 @@ public class Choose_Designation extends AppCompatActivity implements View.OnClic
         binding.txtTeacher.setOnClickListener(this);
         binding.txtOther.setOnClickListener(this);
 
+        if (MyPreferences.getInstance(this).getBoolean(PrefConf.KEY_IS_LOGGED_IN,false)){
+            startActivity(new Intent(Choose_Designation.this, MainActivity.class));
+            finish();
+        }
 
     }
 

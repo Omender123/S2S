@@ -102,8 +102,8 @@ public class ChangePassword extends AppCompatActivity implements View.OnClickLis
         if (message.equalsIgnoreCase("ok")){
             startActivity(new Intent(ChangePassword.this,LoginActivity.class)
                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP));
-
             finish();
+            MyPreferences.getInstance(context).clearPreferences();
             Toast.makeText(this, "Password Change Successfully", Toast.LENGTH_SHORT).show();
         }
     }

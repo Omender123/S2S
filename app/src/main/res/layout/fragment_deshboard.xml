@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.Home.DeshboardFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/custom_banner_layout" />
+
+            <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:spi_dotColor="#c2c2c2"
+                app:spi_dotSelectedColor="#2d31fa"
+                app:spi_dotSelectedSize="10dp"
+                app:spi_dotSize="7dp"
+                app:spi_dotSpacing="6dp"
+                app:spi_looped="false" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="My Class"
+                android:textColor="#06090e"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="#78b2b2b2"
+                app:strokeWidth="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="05dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_group_20273" />
+
+                    <TextView
+                        android:id="@+id/txt_class"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="05dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/img_arrow"
+                        android:layout_toEndOf="@+id/img"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Class - 11thA"
+                        android:textColor="#06090e"
+                        android:textSize="16dp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_class"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/img_arrow"
+                        android:layout_toEndOf="@+id/img"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="8:15AM - 9:00AM"
+                        android:textColor="#992B2B2B"
+                        android:textSize="13dp"
+                        android:textStyle="normal" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="20dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_icon_awesome_angle_right" />
+
+
+                    <ImageView
+                        android:id="@+id/dash"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_below="@id/txt_time"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="05dp"
+                        android:layout_toEndOf="@+id/img"
+                        android:layerType="software"
+                        android:src="@drawable/ic_line_144" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dash"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/img_arrow"
+                        android:layout_toEndOf="@+id/img"
+                        android:fontFamily="@font/poppins"
+                        android:justificationMode="inter_word"
+                        android:text="Your are the class teacher of this class "
+                        android:textColor="#992B2B2B"
+                        android:textSize="12dp"
+                        android:textStyle="normal" />
+
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Your Activity"
+                android:textColor="#06090e"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                tools:itemCount="5"
+                tools:listitem="@layout/custom_activity_layout" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Current Subject Classes"
+                android:textColor="#06090e"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="#78b2b2b2"
+                app:strokeWidth="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/class_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="05dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_group_20273" />
+
+                    <TextView
+                        android:id="@+id/txt_class1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="05dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/img_arrow1"
+                        android:layout_toEndOf="@+id/class_img"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Class - 11thA"
+                        android:textColor="#06090e"
+                        android:textSize="16dp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_Classtime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_class1"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/img_arrow1"
+                        android:layout_toEndOf="@+id/class_img"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="8:15AM - 9:00AM"
+                        android:textColor="#992B2B2B"
+                        android:textSize="13dp"
+                        android:textStyle="normal" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="20dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_icon_awesome_angle_right" />
+
+
+                    <ImageView
+                        android:id="@+id/dash1"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_below="@id/txt_Classtime"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="05dp"
+                        android:layout_toEndOf="@+id/class_img"
+                        android:layerType="software"
+                        android:src="@drawable/ic_line_144" />
+
+
+                    <TextView
+                        android:id="@+id/txt_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dash1"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/img_arrow1"
+                        android:layout_toEndOf="@+id/class_img"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Today's Topic "
+                        android:textColor="#06090e"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_top_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_top"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/class_img"
+                        android:fontFamily="@font/poppins"
+                        android:justificationMode="inter_word"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor "
+                        android:textColor="#8006090E"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

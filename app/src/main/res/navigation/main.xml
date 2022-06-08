@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/dashboardFragment">
+    <fragment
+        android:id="@id/dashboardFragment"
+        android:name="com.edutech.ui.Home.DeshboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_deshboard" />
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.edutech.ui.Home.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+
+    <fragment
+        android:id="@id/attendance"
+        android:name="com.edutech.ui.Attendance.AttendanceFragment"
+        android:label="Attendance"
+        tools:layout="@layout/fragment_attendance" />
+    <fragment
+        android:id="@id/classes"
+        android:name="com.edutech.ui.Classes.ClassesFragment"
+        android:label="Classes"
+        tools:layout="@layout/fragment_classes" />
+    <fragment
+        android:id="@id/profile"
+        android:name="com.edutech.ui.Profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>
