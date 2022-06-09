@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.Attendance.RequestLeaveFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eeefff"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txt_leave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingStart="15dp"
+                    android:text="One Day Leave"
+                    android:textColor="#2d31fa"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/txt_manyLeave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="end"
+                    android:paddingEnd="15dp"
+                    android:text="Many days leave"
+                    android:textColor="#919191"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/startDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/btn_border"
+                android:drawableRight="@drawable/ic_icon_feather_calendar"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:hint="Select Date"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="#80303030"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/endDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone"
+                android:background="@drawable/btn_border"
+                android:drawableRight="@drawable/ic_icon_feather_calendar"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:hint="Select Ending Date"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="#80303030"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/btn_border"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Add Description"
+                android:inputType="textMultiLine"
+                android:lines="7"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="10dp"
+                android:textStyle="normal"
+                android:scrollbars="vertical"
+                android:textColor="#80303030"
+                android:textColorHint="#D8D8D8"
+                android:textDirection="firstStrong"
+                android:textSize="16sp"/>
+
+
+            <TextView
+                android:id="@+id/btn_send"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/btn_border"
+                android:backgroundTint="@color/purple_700"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Send"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="normal"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

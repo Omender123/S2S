@@ -46,9 +46,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:paddingStart="15dp"
+                android:paddingStart="30dp"
                 android:paddingTop="15dp"
-                android:paddingEnd="10dp"
+                android:paddingEnd="15dp"
                 android:paddingBottom="15dp"
                 android:src="@drawable/ic_group_20087" />
 

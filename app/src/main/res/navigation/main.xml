@@ -20,7 +20,17 @@
         android:id="@id/attendance"
         android:name="com.edutech.ui.Attendance.AttendanceFragment"
         android:label="Attendance"
-        tools:layout="@layout/fragment_attendance" />
+        tools:layout="@layout/fragment_attendance">
+        <action
+            android:id="@+id/action_attendance_to_myLeaveFragment"
+            app:destination="@id/myLeaveFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/myLeaveFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@id/classes"
         android:name="com.edutech.ui.Classes.ClassesFragment"
@@ -31,5 +41,25 @@
         android:name="com.edutech.ui.Profile.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/myLeaveFragment"
+        android:name="com.edutech.ui.Attendance.MyLeaveFragment"
+        android:label="My Leave"
+        tools:layout="@layout/fragment_my_leave">
+        <action
+            android:id="@+id/action_myLeaveFragment_to_requestLeaveFragment"
+            app:destination="@id/requestLeaveFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/requestLeaveFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestLeaveFragment"
+        android:name="com.edutech.ui.Attendance.RequestLeaveFragment"
+        android:label="Request For Leave"
+        tools:layout="@layout/fragment_request_leave" />
 
 </navigation>

@@ -201,11 +201,11 @@ public class AppUtils {
     }
 
 
-    public static String getCurrentDate() {
+    public static String getCurrentDate(String parrten) {
         String date1 = "";
         Calendar calendar = Calendar.getInstance();
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(parrten);
         date1 = dateFormat.format(calendar.getTime());
 
         return date1;

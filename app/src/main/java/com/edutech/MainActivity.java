@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this, R.id.main);
 
 
-        appBarConfiguration = new AppBarConfiguration.Builder(new int[]{R.id.dashboardFragment,R.id.classes,R.id.attendance,R.id.profile})
+        appBarConfiguration = new AppBarConfiguration.Builder(new int[]{R.id.dashboardFragment, R.id.classes, R.id.attendance, R.id.profile})
                 .setDrawerLayout(binding.drawer)
                 .build();
         NavigationUI.setupWithNavController(binding.navigationView, navController);
@@ -57,8 +57,10 @@ public class MainActivity extends AppCompatActivity {
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if (destination.getId() == R.id.notificationFragment) {
+                if (destination.getId() == R.id.myLeaveFragment || destination.getId() == R.id.requestLeaveFragment) {
                     binding.layout.txtTittle.setText(destination.getLabel());
+                    binding.layout.bottomNavigation.setVisibility(View.GONE);
+                    binding.layout.toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_icon_awesome_arrow_right));
 
                 } else {
                     binding.layout.toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_noun_down_slide_menu_left_2085948));

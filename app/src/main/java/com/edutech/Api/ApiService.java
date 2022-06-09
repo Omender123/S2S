@@ -36,5 +36,10 @@ public interface ApiService {
     @PUT("teacher/updatePassword")
     Call<ResponseBody> ChangePassword(@Body LoginBody body);
 
+    @FormUrlEncoded
+    @POST("teacher/markAttendance")
+    Call<ResponseBody>MarkTeacherAttendance(@Field("status") String status);
+
+
 }
 

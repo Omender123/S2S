@@ -2,6 +2,9 @@ package com.edutech.Api;
 
 import android.content.Context;
 
+import com.edutech.SharedPerfence.MyPreferences;
+import com.edutech.SharedPerfence.PrefConf;
+
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -20,7 +23,7 @@ S2SManager {
 
     public static Retrofit getRetrofit(Context context) {
         //     user_data = SharedPrefManager.getInstance(context).getLoginDATA();
-        //   token = user_data.getToken();
+          token = MyPreferences.getInstance(context).getString(PrefConf.KEY_LOGIN_TOKEN,"");
         if (okHttpClient == null)
             initOkHttp(context);
 
@@ -50,8 +53,8 @@ S2SManager {
             Request original = chain.request();
             Request.Builder requestBuilder = original.newBuilder()
                     .addHeader("Accept", "application/json")
-                    .addHeader("Content-Type", "application/json");
-                  //  .addHeader("Authorization", "bearer " + token);
+                    .addHeader("Content-Type", "application/json")
+                   .addHeader("Authorization", "bearer " + token);
 
             Request request = requestBuilder.build();
             return chain.proceed(request);
