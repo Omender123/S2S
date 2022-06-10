@@ -16,6 +16,7 @@ import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 import android.text.TextUtils;
+import android.text.format.DateFormat;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -159,6 +160,31 @@ public class AppUtils {
         return layoutParams;
     }
 
+
+    public static List<String> getAllDate(String str_date, String end_date) {
+        List<String> dates = new ArrayList<String>();
+
+        SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy");
+        try {
+            Date startDate = (Date) formatter.parse(str_date);
+            Date endDate = (Date) formatter.parse(end_date);
+            long interval = 24 * 1000 * 60 * 60; // 1 hour in millis
+            long endTime = endDate.getTime(); // create your endtime here, possibly using Calendar or Date
+            long curTime = startDate.getTime();
+            while (curTime <= endTime) {
+                dates.add(formatter.format(new Date(curTime)));
+                curTime += interval;
+            }
+            for (int i = 0; i < dates.size(); i++) {
+                String lDate = dates.get(i);
+                System.out.println(" Date is ..." + lDate);
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return dates;
+    }
 
     public static String getDateTime(String timeStamp) {
         String dateTime = "";

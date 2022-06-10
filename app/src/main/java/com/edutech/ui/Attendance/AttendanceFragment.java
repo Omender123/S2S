@@ -139,7 +139,7 @@ public class AttendanceFragment extends Fragment implements RadioGroup.OnChecked
 
     @Override
     public void onError(String message) {
-        Sneaker.with(this)
+        Sneaker.with(getActivity())
                 .setTitle(message)
                 .setMessage("")
                 .setCornerRadius(4)
@@ -162,7 +162,7 @@ public class AttendanceFragment extends Fragment implements RadioGroup.OnChecked
 
     @Override
     public void onFailure(Throwable t) {
-        Sneaker.with(this)
+        Sneaker.with(getActivity())
                 .setTitle(t.getLocalizedMessage())
                 .setMessage("")
                 .setCornerRadius(4)

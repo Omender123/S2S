@@ -3,7 +3,11 @@ package com.edutech.Api;
 
 import com.edutech.Model.Request.LoginBody;
 import com.edutech.Model.Request.SendOtpBody;
+import com.edutech.Model.Request.TeacherLeaveBody;
+import com.edutech.Model.Response.TeacherLeaveResponse;
 import com.edutech.Model.Response.TeacherResponse;
+
+import java.util.List;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -40,6 +44,10 @@ public interface ApiService {
     @POST("teacher/markAttendance")
     Call<ResponseBody>MarkTeacherAttendance(@Field("status") String status);
 
+    @POST("teacher/applyForLeave")
+    Call<ResponseBody> ApplyLeaveTeacher(@Body TeacherLeaveBody body);
 
+    @GET("teacher/LeaveHistory")
+    Call<List<TeacherLeaveResponse>> GetAllTeacherLeaveHistory();
 }
 

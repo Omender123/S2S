@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.core.widget.NestedScrollView
@@ -24,42 +25,55 @@
                 android:background="@drawable/btn_border"
                 android:backgroundTint="@color/purple_700"
                 android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
                 android:text="Request For Leave"
                 android:textColor="#ffffff"
-                android:gravity="center"
                 android:textSize="18sp"
-                android:textStyle="normal"/>
+                android:textStyle="normal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
-                android:layout_marginStart="15dp"
+                android:orientation="horizontal"
                 android:weightSum="2">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_bold"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
                     android:layout_weight="1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Leave History"
                     android:textColor="#212121"
-                    android:text="Leave History"/>
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/txt_seeAll"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_bold"
-                    android:textStyle="bold"
-                    android:textSize="12sp"
                     android:layout_gravity="center"
-                    android:gravity="end"
                     android:layout_weight="1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="end"
+                    android:text="See all"
                     android:textColor="#2d31fa"
-                    android:text="See all"/>
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
             </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="5"
+                tools:listitem="@layout/custom_leave_layout" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
